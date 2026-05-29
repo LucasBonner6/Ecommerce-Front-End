@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+// 1. Abstracts
+@use "abstracts/auxiliares";
+
+// 2. Base stuff
+@use "base/base";
+
+// 3. Layout-related sections
+@use "layout/footer";
+@use "layout/header";
+
+// 4. Components
+@use "components/carrossel";
+@use "components/formulario";
+@use "components/slider";
+@use "components/produtos";
+
+// 5. Pages
+@use "pages/home";
+@use "pages/loja";
+@use "pages/produto";
+@use "pages/carrinho";
+@use "pages/checkout";
+@use "pages/minha-conta";
+@use "pages/meus-pedidos";

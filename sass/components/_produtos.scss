@@ -1,0 +1,130 @@
+@use "../abstracts/auxiliares" as *;
+
+.produto {
+  @include flex($direction: column, $gap: 1.6rem);
+  text-decoration: none;
+  color: inherit;
+
+  &__botao {
+    position: absolute;
+    bottom: 7px;
+    left: 7px;
+    right: 7px;
+
+    & button {
+      width: 100%;
+      background-color: $cor-branca;
+      padding: 1.6rem;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.01);
+      }
+    }
+  }
+
+  &__imagem {
+    height: auto;
+    aspect-ratio: 428/500;
+    position: relative;
+    overflow: hidden;
+
+    & img {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      transition: transform ease-in-out 0.3s;
+
+      &:hover {
+        transform: translate(0, -50%) scale(1.4);
+      }
+    }
+  }
+
+  &__textos {
+    @include flex($direction: column, $gap: 0.6rem);
+  }
+
+  &__titulo {
+    text-transform: uppercase;
+  }
+
+  &__preco {
+    @include flex($align: center, $gap: 0.6rem, $justify: space-between);
+    font-weight: 600;
+  }
+
+  &__avista {
+    padding-top: 1rem;
+    font-size: 1.92rem;
+
+    @include respond(small) {
+      font-size: 1.6rem;
+    }
+
+    & sup {
+      font-size: 1.33rem;
+      position: relative;
+      top: 2.5px;
+
+      @include respond(small) {
+        font-size: 1.11rem;
+      }
+    }
+  }
+
+  &__parcelado {
+    font-size: 1.6rem;
+
+    @include respond(small) {
+      font-size: 1.33rem;
+    }
+
+    & sup {
+      font-size: 1.11rem;
+      position: relative;
+      top: 2px;
+
+      @include respond(small) {
+        font-size: 0.92rem;
+      }
+    }
+  }
+
+  &__promocao {
+    & sup {
+      font-size: 1.33rem;
+      position: relative;
+      top: 2px;
+
+      @include respond(small) {
+        font-size: 1.11rem;
+      }
+    }
+
+    & p {
+      &:first-child {
+        padding-top: 0.2rem;
+        font-size: 1.92rem;
+        font-weight: 600;
+        color: $cor-dourado;
+
+        @include respond(small) {
+          font-size: 1.6rem;
+        }
+      }
+
+      &:last-child {
+        padding-top: 1rem;
+        font-weight: 600;
+        font-size: 1.6rem;
+        color: $cor-vermelha-2;
+
+        @include respond(small) {
+          font-size: 1.33rem;
+        }
+      }
+    }
+  }
+}

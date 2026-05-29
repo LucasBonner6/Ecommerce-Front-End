@@ -1,0 +1,77 @@
+@use "sass:color";
+
+// Variáveis
+
+$cor-preta: #000;
+$cor-preto-2: #1b1b1b;
+$cor-branca: #fff;
+$cor-branco-2: #f9f9f9;
+$cor-branco-3: #f0f0f0;
+$cor-vermelha: #ff0000;
+$cor-vermelha-2: #c8102e;
+$cor-cinza-claro: #a7a7a7;
+$cor-cinza-claro-2: #b0b0b0;
+$cor-cinza-claro-3: #d8d9da;
+$cor-cinza: #626262;
+$cor-cinza-2: #585858;
+$cor-cinza-escuro: #333;
+$cor-verde: #38ab6b;
+$cor-dourado: #958550;
+
+// Mixin
+
+@mixin flex(
+  $direction: row,
+  $align: stretch,
+  $justify: start,
+  $gap: 0,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-flow: $direction $wrap;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin respond($tamanho) {
+  @if $tamanho == small {
+    @media (max-width: 30em) {
+      @content;
+    }
+  } @else if $tamanho == medium-small {
+    @media (max-width: 46.875em) {
+      @content;
+    }
+  } @else if $tamanho == medium {
+    @media (max-width: 59.375em) {
+      @content;
+    }
+  } @else if $tamanho == big {
+    @media (max-width: 80em) {
+      @content;
+    }
+  }
+}
+
+// Placeholder
+
+%botao-verde {
+  margin-top: 1.28rem;
+  width: 100%;
+  background-color: $cor-verde;
+  border-radius: 8px;
+  color: $cor-branca;
+  font-size: inherit;
+  text-transform: uppercase;
+  border: none;
+  padding: 1.6rem 0;
+  transition: background-color ease-in 0.15s;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+
+  &:hover {
+    background-color: color.adjust($cor-verde, $lightness: -10%);
+  }
+}
