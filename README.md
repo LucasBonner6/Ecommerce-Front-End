@@ -25,3 +25,6 @@ O grande diferencial deste projeto foi a aplicação de recursos modernos do eco
 ## Como rodar a aplicação
 
 Como o projeto foi construído puramente com tecnologias nativas da web, não é necessário instalar dependências pesadas.
+
+Você pode ver o projeto em funcionamento através do link abaixo:
+👉 [Acessar o projeto ao vivo](https://lucasbonner6.github.io/Ecommerce-Front-End/)
