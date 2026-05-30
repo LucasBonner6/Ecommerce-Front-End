@@ -3,6 +3,10 @@
 Uma reconstrução responsiva e moderna da interface principal do e-commerce da **Reserva**, focada em performance, semântica estrutural e técnicas avançadas de estilização.
 Este projeto foi desenvolvido como um desafio técnico para demonstrar o domínio de conceitos modernos de Front-End Vanilla (HTML5, CSS3 de última geração e JavaScript puro).
 
+## 📸 Interface do Projeto
+
+![Preview da PizzaHash](./img/preview.png)
+
 ## Funcionalidades
 
 - **Navbar Dinâmica:** Menu superior categorizado e barra de busca integrada com ícones funcionais.
